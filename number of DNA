@@ -1,0 +1,12 @@
+str = "ctacaatgtcagtatacccattgcattagccgg"
+
+list_str = list(str)
+
+
+list_dna = ['a','t', 'g', 'c']
+
+for i in list_dna:
+
+  x = list_str.count(i)
+
+  print("{}의 개수:".format(i), x)
