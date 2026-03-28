@@ -1,0 +1,25 @@
+
+#위와 같은 염기가 존재할 때 3개씩 끊어 어떤 염기가 존재하는지 알려주는거 만들기
+
+DNA = input("염기를 입력하세요: ")
+
+print("입력한 염기>", DNA)
+
+list_codon = []
+list_DNA = ['a','t','g','c']
+list_all_codon = []
+
+for i in range(0,len(DNA), 3):
+  list_codon.append(DNA[i:i+3])
+
+for j in list_DNA:
+  for k in list_DNA:
+    for l in list_DNA:
+      list_all_codon.append(j+k+l)
+
+for n in list_all_codon:
+  number_of_codon = list_codon.count(n)
+  if number_of_codon != 0:
+    print("{}의 개수:".format(n), number_of_codon)
+
+print("염기의 코돈:", list_codon)
